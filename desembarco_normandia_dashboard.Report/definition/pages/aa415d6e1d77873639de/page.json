@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "aa415d6e1d77873639de",
+  "displayName": "1 A 5 JUNIO",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "dcaada5a041eb10a1005",
+    "type": "Default",
+    "parameters": []
+  }
+}

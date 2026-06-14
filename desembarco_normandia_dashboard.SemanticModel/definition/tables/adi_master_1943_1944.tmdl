@@ -1,0 +1,409 @@
+table adi_master_1943_1944
+	lineageTag: d3946f28-ec70-4bb7-b36a-13314fd3a603
+
+	column 'Mission ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 819ffb0d-082d-40ac-afc2-7b346de38c27
+		summarizeBy: none
+		sourceColumn: Mission ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mission Date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 38f0915a-b66e-4f73-8bea-dd27d4ef86cd
+		summarizeBy: none
+		sourceColumn: Mission Date
+
+		variation Variación
+			isDefault
+			relationship: 6e1520af-7e8e-44d9-8ba6-2904064ca8fd
+			defaultHierarchy: LocalDateTable_16518298-1804-42b8-9956-d9f0d8219f62.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Theater of Operations'
+		dataType: string
+		lineageTag: 4c964262-1147-426e-a629-6ca629250353
+		summarizeBy: none
+		sourceColumn: Theater of Operations
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 67c4d822-2794-4be7-b004-c963bc642084
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Air Force'
+		dataType: string
+		lineageTag: 8f743de7-5949-4228-a0a7-b950086b4672
+		summarizeBy: none
+		sourceColumn: Air Force
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit ID'
+		dataType: string
+		lineageTag: 60547ba5-412d-4af5-a0c2-fdcfc779a467
+		summarizeBy: none
+		sourceColumn: Unit ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aircraft Series'
+		dataType: string
+		lineageTag: dc53edc0-d156-4786-a190-7030f9828f4e
+		summarizeBy: none
+		sourceColumn: Aircraft Series
+
+		annotation SummarizationSetBy = Automatic
+
+	column Callsign
+		dataType: string
+		lineageTag: df2eb6b3-8663-4170-a06f-d1a25e04fc38
+		summarizeBy: none
+		sourceColumn: Callsign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mission Type'
+		dataType: string
+		lineageTag: 618a65d4-4432-4570-ad90-44d474b08dfe
+		summarizeBy: none
+		sourceColumn: Mission Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Takeoff Base'
+		dataType: string
+		lineageTag: de362959-0bb6-4563-9b27-69cb8146355a
+		summarizeBy: none
+		sourceColumn: Takeoff Base
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Takeoff Location'
+		dataType: string
+		lineageTag: 6a78cf60-9ef9-4b53-930c-f19aa69edf5d
+		summarizeBy: none
+		sourceColumn: Takeoff Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Takeoff Latitude'
+		dataType: string
+		lineageTag: cb47891b-b5ab-48e7-8f4a-ab7f08b2534c
+		summarizeBy: none
+		sourceColumn: Takeoff Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Takeoff Longitude'
+		dataType: string
+		lineageTag: bfe5a48c-50bc-47c2-b1f9-4740d3266a3e
+		summarizeBy: none
+		sourceColumn: Takeoff Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 290ebaae-9cb9-49f6-8658-f5bca9bebb11
+		summarizeBy: count
+		sourceColumn: Target ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target Country'
+		dataType: string
+		lineageTag: eedf66b4-d368-4fe9-8419-f7bddad7ed6b
+		summarizeBy: none
+		sourceColumn: Target Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target City'
+		dataType: string
+		lineageTag: 12923a74-5367-4d73-97dd-57bb226ac973
+		summarizeBy: none
+		sourceColumn: Target City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target Type'
+		dataType: string
+		lineageTag: 9ef8b364-f042-460d-afac-81e23f761cb1
+		summarizeBy: none
+		sourceColumn: Target Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target Industry'
+		dataType: string
+		lineageTag: f3183896-4370-473a-8545-6c0cf987a162
+		summarizeBy: none
+		sourceColumn: Target Industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target Priority'
+		dataType: int64
+		formatString: 0
+		lineageTag: 730bdd67-474f-4c39-a9d9-994429cc0485
+		summarizeBy: sum
+		sourceColumn: Target Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target Latitude'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0dba4d6-4462-48de-a135-f3e9f1374daa
+		summarizeBy: sum
+		sourceColumn: Target Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column 'Target Longitude'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2da34f6b-e3ad-428f-b4a2-2df355bbd4d2
+		summarizeBy: sum
+		sourceColumn: Target Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column 'Altitude (Hundreds of Feet)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e89193e-7ee6-4a23-8d4c-7c8ef417e5cd
+		summarizeBy: sum
+		sourceColumn: Altitude (Hundreds of Feet)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Airborne Aircraft'
+		dataType: int64
+		formatString: 0
+		lineageTag: cf97a5e6-71f3-45ff-b929-40ba9d05cf40
+		summarizeBy: sum
+		sourceColumn: Airborne Aircraft
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Attacking Aircraft'
+		dataType: int64
+		formatString: 0
+		lineageTag: a01eb408-4ee2-425a-b373-9059c146dd87
+		summarizeBy: sum
+		sourceColumn: Attacking Aircraft
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bombing Aircraft'
+		dataType: int64
+		formatString: 0
+		lineageTag: 73ca67e8-5a57-4ec9-bb6e-05c6e9a7b357
+		summarizeBy: sum
+		sourceColumn: Bombing Aircraft
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aircraft Returned'
+		dataType: string
+		lineageTag: c72c9583-9d68-4108-bab2-bc49817acfdb
+		summarizeBy: none
+		sourceColumn: Aircraft Returned
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aircraft Failed'
+		dataType: string
+		lineageTag: 97e17c19-b05a-4e24-8831-035b2ebeb06a
+		summarizeBy: none
+		sourceColumn: Aircraft Failed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aircraft Damaged'
+		dataType: string
+		lineageTag: c3290872-700f-4192-905b-70759aa38aaf
+		summarizeBy: none
+		sourceColumn: Aircraft Damaged
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aircraft Lost'
+		dataType: string
+		lineageTag: d1ae3cd2-24f5-449a-90cb-092b0c108e5a
+		summarizeBy: none
+		sourceColumn: Aircraft Lost
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'High Explosives'
+		dataType: string
+		lineageTag: 6a1c7c25-3b66-4a88-a607-709f5348779b
+		summarizeBy: none
+		sourceColumn: High Explosives
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'High Explosives Type'
+		dataType: string
+		lineageTag: f64d1f9d-bf2d-44fc-8784-2021a8aa6258
+		summarizeBy: none
+		sourceColumn: High Explosives Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'High Explosives Weight (Pounds)'
+		dataType: string
+		lineageTag: eef33733-118c-47d8-baab-f6d88543955e
+		summarizeBy: none
+		sourceColumn: High Explosives Weight (Pounds)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'High Explosives Weight (Tons)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f6407d9-a8a4-4a7d-82be-f946fb496792
+		summarizeBy: sum
+		sourceColumn: High Explosives Weight (Tons)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Incendiary Devices'
+		dataType: string
+		lineageTag: 6e011289-fc60-4611-9d3f-556297e5099d
+		summarizeBy: none
+		sourceColumn: Incendiary Devices
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Incendiary Devices Type'
+		dataType: string
+		lineageTag: 568866f7-9b16-4712-9256-ad0a76385e3f
+		summarizeBy: none
+		sourceColumn: Incendiary Devices Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Incendiary Devices Weight (Pounds)'
+		dataType: string
+		lineageTag: 59f8cf44-05e8-4fbf-b824-307829c54dad
+		summarizeBy: none
+		sourceColumn: Incendiary Devices Weight (Pounds)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Incendiary Devices Weight (Tons)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5412427d-d183-4e2d-8031-63b52f5fb352
+		summarizeBy: sum
+		sourceColumn: Incendiary Devices Weight (Tons)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fragmentation Devices'
+		dataType: string
+		lineageTag: a2b24e4f-a89f-4abd-b29c-0b49e3cfeb56
+		summarizeBy: none
+		sourceColumn: Fragmentation Devices
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fragmentation Devices Type'
+		dataType: string
+		lineageTag: e05f6d40-3e3b-4cb7-a415-3b27c591a964
+		summarizeBy: none
+		sourceColumn: Fragmentation Devices Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fragmentation Devices Weight (Pounds)'
+		dataType: string
+		lineageTag: 97e79050-a0ed-4212-bb6e-232b9b5c2787
+		summarizeBy: none
+		sourceColumn: Fragmentation Devices Weight (Pounds)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fragmentation Devices Weight (Tons)'
+		dataType: int64
+		formatString: 0
+		lineageTag: f1b8cdca-cbe8-4ff9-a64c-5873be372089
+		summarizeBy: sum
+		sourceColumn: Fragmentation Devices Weight (Tons)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Weight (Pounds)'
+		dataType: string
+		lineageTag: 97f1d418-4e12-41a3-9a78-ccc99dba8b80
+		summarizeBy: none
+		sourceColumn: Total Weight (Pounds)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Weight (Tons)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1eebdc0c-b7d4-4ada-bd30-bb4a8550f3a2
+		summarizeBy: sum
+		sourceColumn: Total Weight (Tons)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time Over Target'
+		dataType: string
+		lineageTag: 0164d103-d2a9-492e-b5d9-f070d270d321
+		summarizeBy: none
+		sourceColumn: Time Over Target
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bomb Damage Assessment'
+		dataType: string
+		lineageTag: 88a39fd3-eba6-4a48-a498-6e3ce731e7b1
+		summarizeBy: none
+		sourceColumn: Bomb Damage Assessment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 62167ea1-49a3-4842-b448-0b5b6ae21179
+		summarizeBy: count
+		sourceColumn: Source ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition adi_master_1943_1944 = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("D:\HELEN\PERSONAL\FORMACIÓN\++ia_formacion\BOOTCAMP - F5\CURSO\PROYECTO_2.2\archaios-data-Intelligence\adi_master_1943_1944.csv"),[Delimiter=",", Columns=46, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Mission ID", Int64.Type}, {"Mission Date", type date}, {"Theater of Operations", type text}, {"Country", type text}, {"Air Force", type text}, {"Unit ID", type text}, {"Aircraft Series", type text}, {"Callsign", type text}, {"Mission Type", type text}, {"Takeoff Base", type text}, {"Takeoff Location", type text}, {"Takeoff Latitude", type text}, {"Takeoff Longitude", type text}, {"Target ID", Int64.Type}, {"Target Country", type text}, {"Target City", type text}, {"Target Type", type text}, {"Target Industry", type text}, {"Target Priority", Int64.Type}, {"Target Latitude", Int64.Type}, {"Target Longitude", Int64.Type}, {"Altitude (Hundreds of Feet)", Int64.Type}, {"Airborne Aircraft", Int64.Type}, {"Attacking Aircraft", Int64.Type}, {"Bombing Aircraft", Int64.Type}, {"Aircraft Returned", type text}, {"Aircraft Failed", type text}, {"Aircraft Damaged", type text}, {"Aircraft Lost", type text}, {"High Explosives", type text}, {"High Explosives Type", type text}, {"High Explosives Weight (Pounds)", type text}, {"High Explosives Weight (Tons)", Int64.Type}, {"Incendiary Devices", type text}, {"Incendiary Devices Type", type text}, {"Incendiary Devices Weight (Pounds)", type text}, {"Incendiary Devices Weight (Tons)", Int64.Type}, {"Fragmentation Devices", type text}, {"Fragmentation Devices Type", type text}, {"Fragmentation Devices Weight (Pounds)", type text}, {"Fragmentation Devices Weight (Tons)", Int64.Type}, {"Total Weight (Pounds)", type text}, {"Total Weight (Tons)", Int64.Type}, {"Time Over Target", type text}, {"Bomb Damage Assessment", type text}, {"Source ID", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+
