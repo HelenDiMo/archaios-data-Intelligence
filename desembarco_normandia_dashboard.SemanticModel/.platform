@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "desembarco_normandia_dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5f48f16c-4f46-4210-8f0d-8cc2a71f590a"
+  }
+}

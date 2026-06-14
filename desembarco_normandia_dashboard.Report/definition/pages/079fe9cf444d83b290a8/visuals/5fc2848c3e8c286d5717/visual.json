@@ -1,0 +1,246 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "5fc2848c3e8c286d5717",
+  "position": {
+    "x": 10,
+    "y": 0,
+    "z": 0,
+    "height": 414.5454545454545,
+    "width": 691.81818181818176,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "adi_dataset_master"
+                    }
+                  },
+                  "Property": "Target City"
+                }
+              },
+              "queryRef": "adi_dataset_master.Target City",
+              "nativeQueryRef": "Target City",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "adi_dataset_master"
+                    }
+                  },
+                  "Property": "Aircraft Series"
+                }
+              },
+              "queryRef": "adi_dataset_master.Aircraft Series",
+              "nativeQueryRef": "Aircraft Series"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "adi_dataset_master"
+                        }
+                      },
+                      "Property": "Target Latitude"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(adi_dataset_master.Target Latitude)",
+              "nativeQueryRef": "Suma de Target Latitude"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "adi_dataset_master"
+                        }
+                      },
+                      "Property": "Target Longitude"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(adi_dataset_master.Target Longitude)",
+              "nativeQueryRef": "Suma de Target Longitude"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "adi_dataset_master"
+                        }
+                      },
+                      "Property": "Total Weight (Tons)"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(adi_dataset_master.Total Weight (Tons))",
+              "nativeQueryRef": "Suma de Total Weight (Tons)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapStyles": [
+        {
+          "properties": {
+            "mapTheme": {
+              "expr": {
+                "Literal": {
+                  "Value": "'grayscale'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "autoZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showZoomButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showLassoButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "geocodingCulture": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "centerLatitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "49.529730166782066D"
+                }
+              }
+            },
+            "centerLongitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "-0.48080859142164645D"
+                }
+              }
+            },
+            "zoomLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Día D (6 de junio de 1944)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

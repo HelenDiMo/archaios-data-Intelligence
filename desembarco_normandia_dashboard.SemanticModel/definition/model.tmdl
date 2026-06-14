@@ -1,0 +1,24 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["adi_dataset_master","adi_master_1_5_junio","adi_master_1943_1944"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table adi_dataset_master
+ref table DateTableTemplate_98d4a700-ce8d-4ef8-8946-afc3a58726af
+ref table LocalDateTable_42f1978c-4309-4622-a6e6-44f638248ae0
+ref table adi_master_1_5_junio
+ref table LocalDateTable_5d16dce2-cfe9-4861-80dd-c3910e031179
+ref table adi_master_1943_1944
+ref table LocalDateTable_16518298-1804-42b8-9956-d9f0d8219f62
+
+ref cultureInfo es-ES
+

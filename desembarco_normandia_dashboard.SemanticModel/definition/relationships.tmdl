@@ -1,0 +1,27 @@
+relationship 7f62391d-e059-427b-be8c-863aba66a80a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: adi_dataset_master.'Mission Date'
+	toColumn: LocalDateTable_42f1978c-4309-4622-a6e6-44f638248ae0.Date
+
+relationship e9f5dc8f-4c9e-47a1-82e8-8a6b40b42fbf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: adi_master_1_5_junio.'Mission Date'
+	toColumn: LocalDateTable_5d16dce2-cfe9-4861-80dd-c3910e031179.Date
+
+relationship 6e1520af-7e8e-44d9-8ba6-2904064ca8fd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: adi_master_1943_1944.'Mission Date'
+	toColumn: LocalDateTable_16518298-1804-42b8-9956-d9f0d8219f62.Date
+
+relationship AutoDetected_45819c94-8332-4fad-bed4-f226af196997
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: adi_dataset_master.'Mission ID'
+	toColumn: adi_master_1943_1944.'Mission ID'
+
+relationship AutoDetected_d1ba1a9c-fc18-493c-a4a3-f57bb43ee27e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: adi_master_1_5_junio.'Mission ID'
+	toColumn: adi_master_1943_1944.'Mission ID'
+
