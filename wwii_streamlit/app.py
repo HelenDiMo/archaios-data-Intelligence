@@ -99,7 +99,7 @@ if menu == "📌 Introducción":
     col_izq, col_centro, col_der = st.columns([1, 2, 1])
     with col_centro:
         # Ajustamos la ruta para que use la subcarpeta correcta en el repositorio
-        st.image("images/introduccion.jpg", use_container_width=True)
+        st.image("wwii_streamlit/images/introduccion.jpg", use_container_width=True)
 
     st.markdown("""
     Este proyecto combina análisis histórico, visualización de datos y narrativa arqueológica
