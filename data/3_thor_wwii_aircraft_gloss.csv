@@ -5,7 +5,7 @@ gloss_id,aircraft,name,full_name,aircraft_type,hyperlink
 4,A36,A36,North American A-36 Apache (Invader),Ground Attack / Dive Bomber,http://militaryfactory.com/aircraft/detail.asp?aircraft_id=687
 5,ALBA,Albacore,Fairey Albacore,Naval Torpedo Bomber,http://militaryfactory.com/aircraft/detail.asp?aircraft_id=1390
 6,AUDA,Audax,Hawker Audax,Biplane Light Bomber,http://en.wikipedia.org/wiki/Hawker_Hart
-7,B17,FORT,B-17 Flying Fortress,Heavy Bomber,http://boeing.com/history/products/b-17-flying-fortress.page
+7,B17,FORT,B-17 Flying Fortress,Heavy Bomber,https://es.wikipedia.org/wiki/Boeing_B-17_Flying_Fortress
 8,B24,Liberator,B-24 Liberator,Heavy Bomber,http://militaryfactory.com/aircraft/detail.asp?aircraft_id=80
 9,B25,B25,B-25 Mitchell,Medium Bomber,http://militaryfactory.com/aircraft/detail.asp?aircraft_id=81
 10,B26,B26,Martin B-26 Marauder,Medium Bomber,http://militaryfactory.com/aircraft/detail.asp?aircraft_id=299
