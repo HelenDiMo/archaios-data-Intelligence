@@ -5,6 +5,16 @@ import folium
 from streamlit_folium import st_folium
 import os
 
+# 📌 CÁLCULO DE RUTA ABSOLUTA AUTOMÁTICA
+# Tomamos la carpeta actual donde vive app.py (wwii_streamlit)
+carpeta_actual = os.path.dirname(__file__)
+
+# Subimos un nivel para llegar a la raíz y apuntamos al CSV limpio
+ruta_clean_csv = os.path.abspath(os.path.join(carpeta_actual, "..", "adi_master_1943_1944_CLEAN.csv"))
+
+# Cargamos el DataFrame usando la ruta calculada de forma segura
+df = pd.read_csv(ruta_clean_csv)
+
 # =====================================================================
 # 🗃️ CARGA DEL GLOSARIO REAL DE AERONAVES (Para usar la columna hyperlink)
 # =====================================================================
