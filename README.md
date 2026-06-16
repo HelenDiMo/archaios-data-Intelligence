@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo_adi.png" alt="Logo del Proyecto" width="300">
+  <img src="logo_adi.png" alt="Logo del Proyecto" width="250">
 </p>
 
 # 🏛️ Archaios Data Intelligence
