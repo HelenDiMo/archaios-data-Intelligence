@@ -61,7 +61,7 @@ El análisis visual está estructurado de manera cronológica y estratégica par
 
 * **Dia D** (El Día más Largo): Análisis visual de la situación vivida en ese día, en el que se realizó una de las operaciones militares más importantes y trágicas de la historia. 
 
-### 🟩 JUSTIFICACIÓN DE LA HERRAMIENTA
+### 🟩 Justificación de la Herramienta
 
 Se seleccionó Power BI como herramienta principal debido a su capacidad para construir dashboards interactivos orientados a negocio sin necesidad de programación.
 
