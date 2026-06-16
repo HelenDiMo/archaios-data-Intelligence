@@ -99,7 +99,7 @@ if menu == "📌 Introducción":
     col_izq, col_centro, col_der = st.columns([1, 2, 1])
     with col_centro:
         # Ajustamos la ruta para que use la subcarpeta correcta en el repositorio
-        st.image("wwii_streamlit/images/introduccion.jpg", use_container_width=True)
+        st.image("images/introduccion.jpg", use_container_width=True)
 
     st.markdown("""
     Este proyecto combina análisis histórico, visualización de datos y narrativa arqueológica
@@ -248,28 +248,85 @@ elif menu == "🔥 1–5 Junio 1944":
     st.header("🚀 Operaciones Preliminares: El Aislamiento de Normandía (1–5 Junio)")
     st.markdown(
         "Durante los primeros cinco días de junio de 1944, las fuerzas aéreas aliadas ejecutaron la "
-        "**Operación Fortitude** y el Plan de Transportes para destruir las líneas de comunicación francesas."
+        "**Operación Fortitude** y el *Transportation Plan*. El objetivo estratégico no era atacar las playas, "
+        "sino pulverizar las líneas de comunicación, puentes y nudos ferroviarios franceses para asfixiar la logística alemana "
+        "y evitar que enviaran refuerzos blindados a Normandía."
     )
     
     try:
+        # 1. Identificar columnas dinámicamente asegurando la limpieza
         col_fecha = [c for c in df.columns if "date" in c.lower() or "fecha" in c.lower()][0]
+        col_ciudad = [c for c in df.columns if "city" in c.lower() or "ciudad" in c.lower() or "target" in c.lower()][0]
+        
         df_copia = df.copy()
         df_copia['Fecha_DT'] = pd.to_datetime(df_copia[col_fecha], errors='coerce')
-        df_previo = df_copia[(df_copia['Fecha_DT'] >= '1944-06-01') & (df_copia['Fecha_DT'] <= '1944-06-05')]
+        
+        # Filtramos estrictamente los 5 días clave previos al desembarco
+        df_previo = df_copia[(df_copia['Fecha_DT'] >= '1944-06-01') & (df_copia['Fecha_DT'] <= '1944-06-05')].copy()
         
         if not df_previo.empty:
+            # Limpiamos los nombres de las ciudades para que se agrupen correctamente
+            df_previo[col_ciudad] = df_previo[col_ciudad].fillna("Desconocido").astype(str).str.strip()
+            
+            # Métricas destacadas en contenedores visuales
             misiones_previas = len(df_previo)
             aviones_previos = df_previo["Aircraft Series"].nunique()
-            st.info(f"📊 **Métricas del periodo:** Se ejecutaron **{misiones_previas} misiones** con **{aviones_previos} modelos** de aviones.")
             
-            col_ciudad = [c for c in df_previo.columns if "city" in c.lower() or "ciudad" in c.lower() or "target" in c.lower()][0]
-            top_ciudades = df_previo[col_ciudad].value_counts().head(5)
-            st.write("**Principales objetivos estratégicos atacados (Top Ciudades):**")
-            st.bar_chart(top_ciudades)
+            st.markdown("### 📊 Indicadores de Intensidad Táctica")
+            c1, c2 = st.columns(2)
+            with c1:
+                st.metric("💥 Bombardeos Registrados", f"{misiones_previas} incursiones")
+            with c2:
+                st.metric("✈️ Modelos de Aeronaves Activos", f"{aviones_previos} series")
+                
+            st.markdown("---")
+            st.markdown("### 🎯 Análisis de Objetivos: Ciudades Más Castigadas")
+            st.markdown("*Este gráfico muestra los núcleos logísticos clave que los aliados priorizaron para aislar el frente:*")
+            
+            # 2. Agrupación matemática correcta para el gráfico
+            # Contamos cuántas misiones (bombardeos) recibió cada ciudad real en este periodo
+            df_top = df_previo[col_ciudad].value_counts().reset_index()
+            df_top.columns = ["Ciudad Objetivo", "Número de Bombardeos"]
+            df_top = df_top.head(8) # Mostramos las 8 principales para dar más riqueza visual
+            
+            # 3. Construcción del gráfico interactivo con Plotly Express (Paleta Táctica/Militar)
+            fig = px.bar(
+                df_top,
+                x="Número de Bombardeos",
+                y="Ciudad Objetivo",
+                orientation="h",  # Gráfico horizontal para que los nombres de las ciudades se lean perfecto
+                text="Número de Bombardeos",
+                color="Número de Bombardeos",
+                color_continuous_scale=["#D32F2F", "#E65100", "#FFB300"], # Degradado de fuego/alerta militar
+                labels={"Número de Bombardeos": "Incursiones Aéreas", "Ciudad Objetivo": "Ciudad Atacada"}
+            )
+            
+            # Afinamos el diseño estético para que se vea súper profesional
+            fig.update_layout(
+                yaxis={'categoryorder': 'total ascending'}, # La ciudad más atacada saldrá arriba del todo
+                plot_bgcolor="rgba(0,0,0,0)", # Fondo transparente integrado con Streamlit
+                xaxis_title="Frecuencia de Misiones",
+                yaxis_title=None,
+                coloraxis_showscale=False # Ocultamos la barra de escala para limpiar la interfaz
+            )
+            fig.update_traces(
+                textposition="outside", # Coloca los números fuera de las barras para una lectura limpia
+                marker_line_color='rgb(8,48,107)', 
+                marker_line_width=1.5
+            )
+            
+            # Renderizamos el gráfico interactivo ocupando el ancho total
+            st.plotly_chart(fig, use_container_width=True)
+            
         else:
             st.warning("⚠️ No se encontraron misiones para este rango de fechas en este corte de datos.")
-    except Exception:
-        st.info("ℹ️ Campaña de ablandamiento logístico: Ataques masivos a puentes sobre el Sena y el Loira.")
+            
+    except Exception as e:
+        # En caso de un fallo en el procesado de datos, dejamos un fallback narrativo excelente
+        st.info("ℹ️ **Campaña de Ablandamiento Logístico:** Destrucción sistemática de infraestructuras críticas. En este periodo, la actividad aliada se concentró con violencia extrema en nudos ferroviarios periféricos y en los puentes estratégicos sobre los cauces de los ríos Sena y Loira para cortar de raíz el movimiento de las divisiones Panzer.")
+
+
+
 
 # =====================================================================
 # SECCIÓN: DÍA D (6 JUNIO 1944)
