@@ -1,2 +1,17 @@
-**/.pbi/localSettings.json
-**/.pbi/cache.abf
+# Entornos virtuales de Python (Locales)
+.venv/
+venv/
+ENV/
+
+# Código y recursos de la App Web (Oculto para entrega de Power BI)
+wwii_streamlit/
+
+# Archivos temporales y caché de Power BI Desktop
+**/localSettings.json
+**/*.User*.twb
+**/*.tmp
+**/cache.abf
+
+# Archivos ocultos del sistema
+.DS_Store
+Thumbs.db
