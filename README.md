@@ -61,7 +61,30 @@ El análisis visual está estructurado de manera cronológica y estratégica par
 
 * **Dia D** (El Día más Largo): Análisis visual de la situación vivida en ese día, en el que se realizó una de las operaciones militares más importantes y trágicas de la historia. 
 
-## 🛠️ 4. Guía de Uso e Instalación
+## ⚠️ 4. Sesgos y Gobernanza del Dato
+
+Los datos utilizados proceden del repositorio militar **THOR (Theater History of Operations Reports)** del Departamento de Defensa de EE.UU. Aunque es una fuente histórica de alto valor, presenta limitaciones que deben considerarse antes de tomar decisiones operativas o arqueológicas:
+
+### **1. Sesgo de representatividad**  
+Solo se registran misiones documentadas. Algunas operaciones no quedaron archivadas o se perdieron, lo que puede subestimar la actividad real en ciertas zonas.
+
+### **2. Sesgo geográfico**  
+El dataset solo muestra puntos donde hubo bombardeos registrados. Las zonas sin datos no implican ausencia de actividad, sino ausencia de registro.
+
+### **3. Sesgo de etiquetado**  
+Algunos objetivos aparecen como *“Unknown”* o *“Unidentified”*, reduciendo la precisión analítica y dificultando la clasificación por tipo de infraestructura atacada.
+
+### **4. Sesgo temporal**  
+La calidad del registro varía entre 1943 y 1944. En 1944, debido a la preparación del Día D, la documentación fue más exhaustiva, lo que puede generar aparentes incrementos de actividad que responden a mejoras en el registro, no necesariamente a más bombardeos.
+
+### **Impacto si se ignoran**  
+Basar decisiones arqueológicas únicamente en estos datos podría llevar a priorizar zonas incompletas o mal documentadas, o a subestimar áreas con riesgo de munición sin detonar (UXO).
+
+### **Recomendación**  
+Este análisis debe complementarse con fuentes históricas adicionales: mapas militares, archivos locales, informes de daños y fotografías aéreas.
+
+
+## 🛠️ 5. Guía de Uso e Instalación
 
 Para explorar las capacidades interactivas del modelo de datos:
 
@@ -83,7 +106,7 @@ El panel cargará automáticamente los datos locales almacenados en la carpeta r
 
 ¡Usa los filtros interactivos para explorar el mapa de calor de las misiones!
 
-## 🎯 5. Conclusiones de Negocio (Valor Arqueológico)
+## 🎯 6. Conclusiones de Negocio (Valor Arqueológico)
 
 * **Reducción de Costes:** El análisis de los datos demuestra que los esfuerzos no deben centrarse únicamente en la línea de costa, sino en los nudos de transporte del interior, donde la densidad de bombardeos para destruir puentes y vías férreas fue masiva entre el 1 y el 5 de junio.
 
