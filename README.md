@@ -61,6 +61,14 @@ El análisis visual está estructurado de manera cronológica y estratégica par
 
 * **Dia D** (El Día más Largo): Análisis visual de la situación vivida en ese día, en el que se realizó una de las operaciones militares más importantes y trágicas de la historia. 
 
+### 🟩 JUSTIFICACIÓN DE LA HERRAMIENTA
+
+Se seleccionó Power BI como herramienta principal debido a su capacidad para construir dashboards interactivos orientados a negocio sin necesidad de programación.
+
+Power BI permite integrar datos históricos, aplicar filtros cruzados, generar mapas geoespaciales y estructurar una narrativa visual clara, lo que lo convierte en la opción ideal para el público, tanto técnico, como no técnico.
+
+Además, su interfaz intuitiva facilita que la organización pueda mantener y ampliar el cuadro de mando sin depender de desarrolladores externos.
+
 ## ⚠️ 4. Sesgos y Gobernanza del Dato
 
 Los datos utilizados proceden del repositorio militar **THOR (Theater History of Operations Reports)** del Departamento de Defensa de EE.UU. Aunque es una fuente histórica de alto valor, presenta limitaciones que deben considerarse antes de tomar decisiones operativas o arqueológicas:
